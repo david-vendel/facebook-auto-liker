@@ -42,14 +42,14 @@ class FacebookLiker():
                 os.makedirs("profiles")
             
             print ("To connect to Facebook, please write your facebook login info here. This will be only stored locally in your PC in secret.txt file and this program doesn't send nothing elsewhere.")
-            time.sleep(1)
+            sleep(1)
             fb_username = input("\nFacebook username ... ")  # Python 3
-            time.sleep(0.3)    
+            sleep(0.3)    
             fb_password = input("Facebook password ... ")  # Python 3
-            time.sleep(0.5)
+            sleep(0.5)
             print ("\nThis information will be stored in /profiles/secret.txt file. If you want to change them, delete that file and run this program again.")
             
-            time.sleep(0.5)
+            sleep(0.5)
             like_amount = int(input("\nhow many likes to give? ... "))  # Python 3
             
             file = open("./profiles/secret.txt","w") 
@@ -64,7 +64,7 @@ class FacebookLiker():
             
             print ("\nAll great!\nI won't ask this information again. You can change them in file secret.txt in /profiles/ directory, or delete that file and run me again.")
 
-            time.sleep(0.5)
+            sleep(0.5)
             driver = webdriver.Chrome(options=chrome_options)
             
         try:
@@ -134,21 +134,21 @@ class FacebookLiker():
                         n = n/100
                         print (n, 3**n)
                         
-                        time.sleep(3**n )
+                        sleep(3**n )
                     except:
                         print ("cant click")
-                        time.sleep(1)
+                        sleep(1)
                         i+=1
                         body_elem.send_keys(Keys.ESCAPE)
-                        time.sleep(0.1)
+                        sleep(0.1)
                         body_elem.send_keys(Keys.DOWN)
-                        time.sleep(0.1)
+                        sleep(0.1)
                         body_elem.send_keys(Keys.DOWN)
-                        time.sleep(0.1)
+                        sleep(0.1)
                         body_elem.send_keys(Keys.DOWN)
-                        time.sleep(0.1)
+                        sleep(0.1)
                         body_elem.send_keys(Keys.DOWN)
-                        time.sleep(0.1)
+                        sleep(0.1)
                         body_elem.send_keys(Keys.DOWN)
                         
                 else:
@@ -362,5 +362,5 @@ for friend in friendsArray:
     sleep(1)
 
 print ("Finished.")
-time.sleep(3)
+sleep(3)
 driver.close()
